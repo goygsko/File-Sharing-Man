@@ -53,10 +53,11 @@
       "description": "Pesan Paksa Subscribe bot, Gunakan Format parsemode HTML",
       "value": "<b>Hello {first}\n\nAnda harus bergabung di Channel/Grup saya untuk menggunakan saya\n\nSilakan Join Ke Channel Terlebih Dahulu</b>"
     }
+    "DATABASE_URL"
   },
   "addons": [
     {
-    "plan": "heroku-postgresql",
+    "plan": "postgresql",
       "options": {
         "version": "12"
       }
@@ -64,13 +65,13 @@
   ],
   "buildpacks": [
     {
-      "url": "heroku/python"
+      "url": "python"
     }
   ],
   "formation": {
     "worker": {
       "quantity": 1,
-      "size": "eco"
+      "size": "free"
     }
   }
 }
